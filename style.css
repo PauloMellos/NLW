@@ -23,6 +23,7 @@ body * {
 
 header {
     padding-top: 32px;
+    width: calc (120px + 32px);
 
 }
 
@@ -34,9 +35,10 @@ header div {
     border-radius: 50%;
 
     display: flex;
-    padding: 2px;
+    padding: 4px;
+
     transition: transform .3s;
-    animation: fromTop .7s .4s backwards;
+   
 }
 
 header div:hover {
@@ -143,4 +145,16 @@ main section:nth-child(3) {
         transform: translateY(0);   
     }
     
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
