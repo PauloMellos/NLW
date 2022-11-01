@@ -1,4 +1,4 @@
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,20 +23,19 @@ body * {
 
 header {
     padding-top: 32px;
+    width: calc (120px + 32px);
 
 }
 
 header div {
     width: 120px;
     margin: auto;
-    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
-
     border-radius: 50%;
-
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50%, #e2d45c 100%);
     display: flex;
-    padding: 2px;
+
     transition: transform .3s;
-    animation: fromTop .7s .4s backwards;
+   
 }
 
 header div:hover {
@@ -44,10 +43,9 @@ header div:hover {
 }
 
 header div img {
-    width: 100px;
+    width: 120px;
     border-radius: 50%;
-   
-    
+    padding: 4px;
 }
 
 main {
@@ -143,4 +141,16 @@ main section:nth-child(3) {
         transform: translateY(0);   
     }
     
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
